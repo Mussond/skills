@@ -1,0 +1,110 @@
+{
+  "skill": "a11y-wcag-assessment",
+  "current_version": "3.2.0",
+  "versions": [
+    {
+      "version": "3.2.0",
+      "changes": [
+        "Step 3: added pre-processing requirement for whole-page/multi-component inputs — enumerate all component types present before doing the Atomica11y lookup.",
+        "Step 3b: added explicit gate — axe-core must not run until Step 3 completes."
+      ]
+    },
+    {
+      "version": "3.1.0",
+      "changes": [
+        "Pruned SKILL.md by ~47% (309 → ~163 lines). No new content, no structural rewrites.",
+        "Steps table replaced with a checklist (loses 'References used' column; reference files are named in each step's prose).",
+        "Step 0: dropped 'Ask them together, not one at a time' operational nag.",
+        "Step 3b.0: dropped justification sentence about silent degradation.",
+        "Step 3b.1: dropped 'Important notes' block (axe coverage gap, wcag22aa default-off, best-practice rules).",
+        "Step 3b.2: 'Important caveats' block removed from the step body; jsdom and snippet-context caveats moved into Step 4's automated test coverage output so they appear in verdicts.",
+        "Source Hierarchy: dropped 'EN 301 549 and Best Practice are planned' pointer.",
+        "Cut 'Conformance Levels' section (WCAG 101 + regulatory context; description says skip primers).",
+        "Moved 'Growing This Guide' (reference table + maintenance instructions) to references/MAINTAINERS.md.",
+        "Moved 'Key External References' (8 URLs) to references/MAINTAINERS.md.",
+        "Moved full changelog from SKILL.md to references/changelog.json; SKILL.md now carries a one-line pointer."
+      ]
+    },
+    {
+      "version": "3.0.0",
+      "changes": [
+        "Breaking: Skill renamed wcag-conformance → a11y-wcag-assessment. Update any references.",
+        "Breaking: Step 5 production logic (AC writing, usage docs) removed. Moved to new a11y-authoring skill.",
+        "Step 5 collapsed to a routing prompt that offers handoff to a11y-authoring.",
+        "Step 3b split into three sub-steps: 3b.0 environment check (Node + axe-core + jsdom) with hard-stop on missing dependencies; 3b.1 static cross-reference (previous Step 3b behaviour, unchanged); 3b.2 executable axe-core run via jsdom against supplied code, with violations / incomplete / passes output.",
+        "Step 4 'Automated test coverage' section reports which 3b path ran.",
+        "Description rewritten: drops AC and usage doc triggers, names a11y-authoring as the routing target.",
+        "Reference table: ac-format.md / usage-docs-format.md / ds-references.md removed (moved to a11y-authoring). axe-rules-v2.json idea retired.",
+        "H1 retitled 'WCAG Conformance Assessment' to match new scope."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "changes": [
+        "Removed Quick Lookup table (contradicted type tables; pre-empted Step 2 workflow).",
+        "Removed EN 301 549 and Best Practice options from Step 0 (no downstream branch).",
+        "Step 1 rewritten for multi-type classification; defers to wcag-criteria-by-type.md.",
+        "Step 2 drops inline AAA bullet list; reference owns AAA tables.",
+        "Step 3 defers to atomica11y.md for lookup procedure; adds Design pathway (screenshot + JSON walkthrough).",
+        "Step 3b uses Step 0's standard answer instead of re-asking.",
+        "Step 4 references Step 3b's buckets instead of restating the auto/manual split.",
+        "Removed 'Conformance Reasoning Framework' wrapper; Steps 1–4 promoted to h2.",
+        "Source Hierarchy moved below Step 5; trimmed to active sources only.",
+        "Reference: wcag-criteria-by-type.md — Quick Lookup cross-reference removed from 'How to use'.",
+        "Reference: ac-format.md — tag value reconciled (medium → recommended).",
+        "Description: dropped 'annotating components' (no implementation path)."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "changes": [
+        "Populated references/wcag-criteria-by-type.md with four type-to-criteria mapping tables.",
+        "Updated reference table: wcag-criteria-by-type.md status Stub → Ready.",
+        "All four stub reference files now populated; reference layer complete."
+      ]
+    },
+    {
+      "version": "1.1.3",
+      "changes": [
+        "Populated references/ac-format.md from real NotificationCard AC output.",
+        "Updated reference table: ac-format.md status Stub → Ready."
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "changes": [
+        "Populated references/usage-docs-format.md from real NotificationCard output.",
+        "Updated reference table: usage-docs-format.md status Stub → Ready."
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "changes": [
+        "Populated references/ds-references.md with GOV.UK and Carbon entries.",
+        "Updated reference table: ds-references.md status Stub → Ready."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "changes": [
+        "Reframed description: imperative opening, removed bullet structure.",
+        "Added cross-skill routing boundaries (→ senior-comms-review, roadmap-planning, figma-component-builder).",
+        "Fixed reference table: 4 files incorrectly marked 'Ready' changed to 'Stub'.",
+        "Created stub files for wcag-criteria-by-type, ac-format, usage-docs-format, ds-references.",
+        "Directory restructure: existing files moved into references/ subdirectory."
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "changes": [
+        "Removed redundant '# Version' body section (versioning lives in frontmatter)."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "changes": [
+        "Initial versioned release (baseline of current content)."
+      ]
+    }
+  ]
+}
